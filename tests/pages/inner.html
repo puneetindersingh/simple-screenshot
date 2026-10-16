@@ -1,0 +1,16 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Inner scroller test page</title>
+<style>
+  html, body { height: 100%; margin: 0; overflow: hidden; font: 16px system-ui, sans-serif; }
+  header { position: absolute; top: 0; left: 0; right: 0; height: 50px; background: #0a7d00; }
+  main { position: absolute; top: 50px; bottom: 30px; left: 0; right: 0; overflow: auto; }
+  footer { position: absolute; bottom: 0; left: 0; right: 0; height: 30px; background: #333333; }
+  .band { height: 150px; }
+</style></head>
+<body>
+<header></header>
+<main id="main"><script>
+  for (let i = 0; i < 20; i++) document.write(`<div class="band" style="background:hsl(${(i * 37) % 360},70%,60%)"></div>`);
+</script></main>
+<footer></footer>
+</body></html>

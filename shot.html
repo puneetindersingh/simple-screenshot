@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Screenshot</title>
+  <link rel="icon" href="icons/icon32.png">
+  <link rel="stylesheet" href="shot.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="meta">
+      <div class="title" id="title">Loading…</div>
+      <div class="sub" id="sub"></div>
+    </div>
+    <div class="actions">
+      <button id="copy" class="primary" title="Copy to clipboard (Ctrl+C)" disabled>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+        Copy
+      </button>
+      <button id="save" title="Save as PNG (Ctrl+S)" disabled>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19h14"/></svg>
+        Save
+      </button>
+    </div>
+  </header>
+  <p class="note" id="note" hidden></p>
+  <main id="stage">
+    <img id="img" alt="" hidden>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="store.js"></script>
+  <script src="shot.js"></script>
+</body>
+</html>

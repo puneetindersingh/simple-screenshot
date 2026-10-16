@@ -1,0 +1,21 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Long test page</title>
+<style>
+  body { margin: 0; font: 16px system-ui, sans-serif; }
+  .fixed { position: fixed; top: 0; left: 0; right: 0; height: 60px; background: #d00000; color: #fff; z-index: 5; }
+  .spacer { height: 60px; }
+  .band { height: 150px; text-align: center; line-height: 150px; }
+  .sticky { position: sticky; top: 60px; height: 40px; background: #111; color: #fff; z-index: 4; }
+  .cookie { position: fixed; bottom: 0; left: 0; width: 200px; height: 30px; background: #00d000; }
+</style></head>
+<body>
+<div class="fixed">Fixed header</div>
+<div class="spacer"></div>
+<script>
+  for (let i = 0; i < 40; i++) {
+    if (i === 10) document.write('<div class="sticky" id="sticky">Sticky bar</div>');
+    document.write(`<div class="band" style="background:hsl(${(i * 37) % 360},70%,60%)">Band ${i}</div>`);
+  }
+</script>
+<div class="cookie"></div>
+</body></html>
